@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+struct node{
+    int data;
+    node*next;
+};
+
+int main() {
+    node*head=new node();
+    node*second=new node();
+    node*third=new node();
+    
+    head->data=1;
+    second->data=2;
+    third->data=3;
+    
+    head-> next =second;
+    second-> next =third;
+    third-> next =NULL;
+    
+    node*temp=head;
+    while(temp!=NULL){
+    cout << temp->data << " ";  // Show what's inside the box
+        temp = temp->next;
+        }// Move to the next box
+    
+
+    return 0;// Write C++ code here
+    }
